@@ -1,0 +1,30 @@
+<style>
+  textarea {
+    min-height: 50px;
+    resize: vertical; /* Позволяет пользователю изменять размер текстового поля по вертикали */
+  }
+</style>
+
+<h1 mat-dialog-title>Add buyer</h1>
+<div mat-dialog-content style="display: inline; padding: 0px; margin: auto;">
+
+  <mat-form-field class="full-width-input">
+    <input matInput type="text" placeholder="Name of buyer"
+      [(ngModel)]="editingBuyer.name" required>
+  </mat-form-field>
+  <mat-form-field class="full-width-input">
+    <input matInput type="text" placeholder="Surname of buyer"
+      [(ngModel)]="editingBuyer.surname" required>
+  </mat-form-field>
+  <mat-form-field class="full-width-input">
+    <textarea matInput placeholder="Comments of buyer"
+      [(ngModel)]="editingBuyer.coments" required></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button (click)="onNoClick()">Cancel</button>
+  <button class="right-align" mat-raised-button color="primary"
+    [mat-dialog-close]="editingBuyer">Add</button>
+</div>
+
+

@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Edit buyer</h1>
+<div mat-dialog-content>
+        <mat-form-field class="full-width-input">
+            <input matInput placeholder="Name" [(ngModel)]="buyer.name" required>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+            <input matInput placeholder="Surname" [(ngModel)]="buyer.surname" required>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput placeholder="Coments" [(ngModel)]="buyer.coments" required>
+      </mat-form-field>
+        <button mat-raised-button color="primary" (click)="confirmEdit()">Confirm</button>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button (click)="onNoClick()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="confirmEdit()">Save</button>
+</div>
